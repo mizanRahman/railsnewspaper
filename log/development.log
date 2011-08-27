@@ -1,0 +1,2800 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (96.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (143.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (301.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-08-27 01:13:29) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 50ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/rails/info/properties]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+  [4;36;1mSQL (113.0ms)[0m   [0;1mCREATE TABLE `news` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110826190507')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `news`[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mSHOW KEYS FROM `news`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2011-08-27 02:15:36) [GET]
+  [4;36;1mNews Load (1.0ms)[0m   [0;1mSELECT * FROM `news` [0m
+Rendering template within layouts/news
+Rendering news/index
+Completed in 1652ms (View: 1644, DB: 2) | 200 OK [http://127.0.0.1/news]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#new (for 127.0.0.1 at 2011-08-27 02:15:39) [GET]
+  [4;35;1mNews Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendering template within layouts/news
+Rendering news/new
+
+ActionView::TemplateError (news_url failed to generate from {:controller=>"news", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["news", :id] - are they all satisfied?) on line #3 of app/views/news/new.html.erb:
+1: <h1>New news</h1>
+2: 
+3: <% form_for(@news) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    (eval):16:in `news_path'
+    app/views/news/new.html.erb:3
+    app/controllers/news_controller.rb:29:in `new'
+
+Rendered rescues/_trace (50.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#new (for 127.0.0.1 at 2011-08-27 02:16:35) [GET]
+  [4;36;1mNews Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendering template within layouts/news
+Rendering news/new
+
+ActionView::TemplateError (news_url failed to generate from {:controller=>"news", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["news", :id] - are they all satisfied?) on line #3 of app/views/news/new.html.erb:
+1: <h1>New news</h1>
+2: 
+3: <% form_for(@news) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    (eval):16:in `news_path'
+    app/views/news/new.html.erb:3
+    app/controllers/news_controller.rb:29:in `new'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+Migrating to CreateArticles (20110826201739)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+Migrating to CreateArticles (20110826201739)
+  [4;36;1mSQL (112.0ms)[0m   [0;1mCREATE TABLE `articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (19.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110826201739')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `articles`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `articles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `news`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `news`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-08-27 02:19:08) [GET]
+
+ActionController::RoutingError (No route matches "/article" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:19:16) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 49ms (View: 44, DB: 1) | 200 OK [http://127.0.0.1/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-08-27 02:19:20) [GET]
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 20ms (View: 10, DB: 3) | 200 OK [http://127.0.0.1/articles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-27 02:19:45) [POST]
+  Parameters: {"article"=>{"title"=>"desh", "description"=>"desh bangladesh"}, "commit"=>"Create", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk="}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (1.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-26 20:19:45', 'desh', '2011-08-26 20:19:45', 'desh bangladesh')[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/1
+Completed in 39ms (DB: 28) | 302 Found [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:19:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 13ms (View: 6, DB: 4) | 200 OK [http://127.0.0.1/articles/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:19:48) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 15ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-08-27 02:22:17) [GET]
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 13ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-27 02:22:33) [POST]
+  Parameters: {"article"=>{"title"=>"another", "description"=>"another article\r\n"}, "commit"=>"Create", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk="}
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-26 20:22:33', 'another', '2011-08-26 20:22:33', 'another article\r\n')[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/2
+Completed in 43ms (DB: 34) | 302 Found [http://127.0.0.1/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:22:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 10ms (View: 3, DB: 3) | 200 OK [http://127.0.0.1/articles/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:22:36) [GET]
+  [4;36;1mArticle Load (4.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 20ms (View: 7, DB: 6) | 200 OK [http://127.0.0.1/articles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-08-27 02:22:38) [GET]
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://127.0.0.1/articles/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-27 02:22:54) [POST]
+  Parameters: {"article"=>{"title"=>"Welcome to Rails", "description"=>"Rails is a web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Control pattern.\r\n\r\nThis pattern splits the view (also called the presentation) into “dumb” templates that are primarily responsible for inserting pre-built data in between HTML tags. The model contains the “smart” domain objects (such as Account, Product, Person, Post) that holds all the business logic and knows how to persist themselves to a database. The controller handles the incoming requests (such as Save New Account, Update Product, Show Post) by manipulating the model and directing data to the view.\r\n\r\nIn Rails, the model is handled by what’s called an object-relational mapping layer entitled Active Record. This layer allows you to present the data from database rows as objects and embellish these data objects with business logic methods. You can read more about Active Record in its README.\r\n\r\nThe controller and view are handled by the Action Pack, which handles both layers by its two parts: Action View and Action Controller. These two layers are bundled in a single package due to their heavy interdependence. This is unlike the relationship between the Active Record and Action Pack that is much more separate. Each of these packages can be used independently outside of Rails. You can read more about Action Pack in its README."}, "commit"=>"Create", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk="}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-26 20:22:54', 'Welcome to Rails', '2011-08-26 20:22:54', 'Rails is a web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Control pattern.\r\n\r\nThis pattern splits the view (also called the presentation) into “dumb” templates that are primarily responsible for inserting pre-built data in between HTML tags. The model contains the “smart” domain objects (such as Account, Product, Person, Post) that holds all the business logic and knows how to persist themselves to a database. The controller handles the incoming requests (such as Save New Account, Update Product, Show Post) by manipulating the model and directing data to the view.\r\n\r\nIn Rails, the model is handled by what’s called an object-relational mapping layer entitled Active Record. This layer allows you to present the data from database rows as objects and embellish these data objects with business logic methods. You can read more about Active Record in its README.\r\n\r\nThe controller and view are handled by the Action Pack, which handles both layers by its two parts: Action View and Action Controller. These two layers are bundled in a single package due to their heavy interdependence. This is unlike the relationship between the Active Record and Action Pack that is much more separate. Each of these packages can be used independently outside of Rails. You can read more about Action Pack in its README.')[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/3
+Completed in 41ms (DB: 28) | 302 Found [http://127.0.0.1/articles]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:22:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 10ms (View: 3, DB: 4) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-27 02:23:17) [POST]
+  Parameters: {"article"=>{"title"=>"Getting Started", "description"=>"Install Rails at the command prompt if you haven’t yet:\r\n\r\ngem install rails\r\n\r\nAt the command prompt, create a new Rails application:\r\n\r\nrails new myapp\r\n\r\nwhere “myapp” is the application name.\r\n\r\nChange directory to myapp and start the web server:\r\n\r\ncd myapp; rails server\r\n\r\nRun with --help for options.\r\n\r\nGo to localhost:3000/ and you’ll see:"}, "commit"=>"Create", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk="}
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-26 20:23:17', 'Getting Started', '2011-08-26 20:23:17', 'Install Rails at the command prompt if you haven’t yet:\r\n\r\ngem install rails\r\n\r\nAt the command prompt, create a new Rails application:\r\n\r\nrails new myapp\r\n\r\nwhere “myapp” is the application name.\r\n\r\nChange directory to myapp and start the web server:\r\n\r\ncd myapp; rails server\r\n\r\nRun with --help for options.\r\n\r\nGo to localhost:3000/ and you’ll see:')[0m
+  [4;36;1mSQL (28.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/4
+Completed in 39ms (DB: 29) | 302 Found [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:23:18) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 12ms (View: 3, DB: 4) | 200 OK [http://127.0.0.1/articles/4]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:23:19) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 18ms (View: 11, DB: 3) | 200 OK [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-27 02:24:01) [POST]
+  Parameters: {"article"=>{"title"=>"Why Write Tests for your Rails Applications?", "description"=>"    Rails makes it super easy to write your tests. It starts by producing skeleton test code in the background while you are creating your models and controllers.\r\n    By simply running your Rails tests you can ensure your code adheres to the desired functionality even after some major code refactoring.\r\n    Rails tests can also simulate browser requests and thus you can test your application’s response without having to test it through your browser."}, "commit"=>"Create", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk="}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (1.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-26 20:24:01', 'Why Write Tests for your Rails Applications?', '2011-08-26 20:24:01', ' Rails makes it super easy to write your tests. It starts by producing skeleton test code in the background while you are creating your models and controllers.\r\n By simply running your Rails tests you can ensure your code adheres to the desired functionality even after some major code refactoring.\r\n Rails tests can also simulate browser requests and thus you can test your application’s response without having to test it through your browser.')[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/5
+Completed in 46ms (DB: 36) | 302 Found [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:24:01) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 5) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 11ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/articles/5]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:24:05) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 24ms (View: 13, DB: 3) | 200 OK [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-27 02:24:28) [POST]
+  Parameters: {"article"=>{"title"=>"Introduction to Testing", "description"=>"Testing support was woven into the Rails fabric from the beginning. It wasn’t an “oh! let’s bolt on support for running tests because they’re new and cool” epiphany. Just about every Rails application interacts heavily with a database – and, as a result, your tests will need a database to interact with as well. To write efficient tests, you’ll need to understand how to set up this database and populate it with sample data."}, "commit"=>"Create", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk="}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (1.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-26 20:24:28', 'Introduction to Testing', '2011-08-26 20:24:28', 'Testing support was woven into the Rails fabric from the beginning. It wasn’t an “oh! let’s bolt on support for running tests because they’re new and cool” epiphany. Just about every Rails application interacts heavily with a database – and, as a result, your tests will need a database to interact with as well. To write efficient tests, you’ll need to understand how to set up this database and populate it with sample data.')[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/6
+Completed in 43ms (DB: 36) | 302 Found [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:24:28) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 6) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 10ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/articles/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:24:31) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 25ms (View: 14, DB: 3) | 200 OK [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:27:38) [GET]
+  Parameters: {"id"=>"create"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=create):
+  app/controllers/articles_controller.rb:16:in `show'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-27 02:27:48) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-26 20:27:48', NULL, '2011-08-26 20:27:48', NULL)[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/7
+Completed in 46ms (DB: 37) | 302 Found [http://127.0.0.1/articles/create/5]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:27:48) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 7) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 10ms (View: 3, DB: 3) | 200 OK [http://127.0.0.1/articles/7]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-08-27 02:28:01) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 7) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 20ms (View: 9, DB: 3) | 200 OK [http://127.0.0.1/articles/7/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-08-27 02:28:24) [GET]
+
+ActionController::RoutingError (No route matches "/articles/create/hello/mizan" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:28:33) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 7) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 11ms (View: 3, DB: 2) | 200 OK [http://127.0.0.1/articles/7]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:28:35) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2011-08-27 02:28:40) [DELETE]
+  Parameters: {"authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "id"=>"7"}
+  [4;35;1mArticle Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Destroy (90.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 7[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles
+Completed in 144ms (DB: 136) | 302 Found [http://127.0.0.1/articles/7]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:28:40) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mArticle Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 27ms (View: 15, DB: 3) | 200 OK [http://127.0.0.1/articles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:32:17) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_artic_path' for #<ActionView::Base:0xf779a60>) on line #22 of app/views/articles/index.html.erb:
+19: 
+20: <br />
+21: 
+22: <%= link_to 'New article', new_artic_path %>
+
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:7:in `index'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 02:33:05) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 29ms (View: 19, DB: 4) | 200 OK [http://127.0.0.1/articles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-08-27 02:33:10) [GET]
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 12ms (View: 4, DB: 3) | 200 OK [http://127.0.0.1/articles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:43:25) [GET]
+  Parameters: {"id"=>"recent"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=recent):
+  app/controllers/articles_controller.rb:16:in `show'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:43:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 10ms (View: 3, DB: 3) | 200 OK [http://127.0.0.1/articles/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 02:55:01) [GET]
+  Parameters: {"id"=>"recent"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=recent):
+  app/controllers/articles_controller.rb:16:in `show'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-08-27 02:55:18) [GET]
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 13ms (View: 5, DB: 3) | 200 OK [http://127.0.0.1/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+Migrating to CreateArticles (20110826201739)
+Migrating to CreateComments (20110826205811)
+  [4;36;1mSQL (103.0ms)[0m   [0;1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `comment` text, `article_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110826205811')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `articles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `news`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `news`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+Migrating to CreateArticles (20110826201739)
+Migrating to CreateComments (20110826205811)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `articles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `news`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `news`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateComments (20110826205811)
+  [4;36;1mSQL (53.0ms)[0m   [0;1mDROP TABLE `comments`[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20110826205811'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `articles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `news`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `news`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNews (20110826190507)
+Migrating to CreateArticles (20110826201739)
+Migrating to CreateComments (20110826205811)
+  [4;36;1mSQL (65.0ms)[0m   [0;1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `comment` text, `article_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110826205811')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `articles`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `articles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `news`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `news`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:01:55) [GET]
+  Parameters: {"id"=>"2"}
+
+SyntaxError (C:/Users/mizan/BitNami RubyStack projects/newspaper/app/models/article.rb:2: syntax error, unexpected ':', expecting kEND
+has_many: comments
+         ^):
+  app/controllers/articles_controller.rb:16:in `show'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:02:31) [GET]
+  Parameters: {"id"=>"2"}
+
+SyntaxError (C:/Users/mizan/BitNami RubyStack projects/newspaper/app/models/article.rb:2: syntax error, unexpected ':', expecting kEND
+has_many : comments
+          ^):
+  app/controllers/articles_controller.rb:16:in `show'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:02:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 95ms (View: 3, DB: 4) | 200 OK [http://127.0.0.1/articles/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:05:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 19ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/articles/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:05:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_comment_article_path' for #<ActionView::Base:0xf8384d0>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_comment_article_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:06:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf97a7c0>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-08-27 03:15:44) [GET]
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/articles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:15:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xfa3d640>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:16:12) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 5) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf89c3b8>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:16:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf9ea648>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> 
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:17:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf80d1c8>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:18:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf945d08>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:19:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_url' for #<ActionView::Base:0xfa75e00>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_url(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:19:35) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 8, DB: 2) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new to #<article:0xf8be5d0> (for 127.0.0.1 at 2011-08-27 03:19:44) [GET]
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 11ms (View: 1, DB: 2) | 406 Not Acceptable [http://127.0.0.1/articles/new.%23%3Carticle:0xf8be5d0%3E]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new to #<article:0xf8be5d0> (for 127.0.0.1 at 2011-08-27 03:20:42) [GET]
+  [4;36;1mArticle Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 12ms (View: 2, DB: 3) | 406 Not Acceptable [http://127.0.0.1/articles/new.%23%3Carticle:0xf8be5d0%3E]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new to #<article:0xf8be5d0> (for 127.0.0.1 at 2011-08-27 03:20:45) [GET]
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 8ms (View: 1, DB: 2) | 406 Not Acceptable [http://127.0.0.1/articles/new.%23%3Carticle:0xf8be5d0%3E]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new to #<article:0xf8be5d0> (for 127.0.0.1 at 2011-08-27 03:21:10) [GET]
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 11ms (View: 1, DB: 2) | 406 Not Acceptable [http://127.0.0.1/articles/new.%23%3Carticle:0xf8be5d0%3E]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new to #<article:0xf8be5d0> (for 127.0.0.1 at 2011-08-27 03:21:10) [GET]
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 8ms (View: 1, DB: 3) | 406 Not Acceptable [http://127.0.0.1/articles/new.%23%3Carticle:0xf8be5d0%3E]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new to #<article:0xf8be5d0> (for 127.0.0.1 at 2011-08-27 03:21:23) [GET]
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 10ms (View: 2, DB: 4) | 406 Not Acceptable [http://127.0.0.1/articles/new.%23%3Carticle:0xf8be5d0%3E]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:21:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xfa0cfb0>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:26:20) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf858078>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (81.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-08-27 03:43:50) [GET]
+
+ActionController::RoutingError (No route matches "/comments/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-08-27 03:44:14) [GET]
+
+ActionController::RoutingError (No route matches "/comments" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-08-27 03:46:32) [GET]
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://127.0.0.1/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:46:47) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 15ms (View: 6, DB: 3) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-08-27 03:46:50) [GET]
+
+ActionController::RoutingError (No route matches "/comments/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 03:50:28) [GET]
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+
+ActionView::MissingTemplate (Missing template comments/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:50:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 97ms (View: 69, DB: 4) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 03:51:10) [GET]
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+
+ActionView::MissingTemplate (Missing template comments/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:51:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf8ad788>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:53:28) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0x55ec330>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:53:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf99f918>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 03:53:32) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xfac6740>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 04:59:03) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf8721d8>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 04:59:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `new_article_comment_path' for #<ActionView::Base:0xf9d70a0>) on line #14 of app/views/articles/show.html.erb:
+11: 
+12: <%= link_to 'Edit', edit_article_path(@article) %> |
+13: <%= link_to 'Back', articles_path %><br/>
+14: <%= link_to 'New Comment', new_article_comment_path(@article) %> |
+
+    app/views/articles/show.html.erb:14
+    app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 05:05:22) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 57ms (View: 6, DB: 2) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 05:05:25) [GET]
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+
+ActionView::MissingTemplate (Missing template comments/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 05:05:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (50.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 64ms (View: 7, DB: 51) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new to #<article:0xfa422f0> (for 127.0.0.1 at 2011-08-27 05:05:54) [GET]
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+
+ActionView::MissingTemplate (Missing template comments/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new to #<article:0xfa422f0> (for 127.0.0.1 at 2011-08-27 05:08:02) [GET]
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+
+ActionView::MissingTemplate (Missing template comments/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-08-27 05:08:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 8, DB: 2) | 200 OK [http://127.0.0.1/articles/3/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-08-27 05:10:42) [GET]
+
+ActionController::RoutingError (No route matches "/articles/3/comments/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 05:46:29) [GET]
+  Parameters: {"id"=>"recent"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=recent):
+  app/controllers/articles_controller.rb:16:in `show'
+
+Rendered rescues/_trace (102.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 21:13:14) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 28ms (View: 20, DB: 3) | 200 OK [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 21:13:17) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 20ms (View: 7, DB: 3) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:13:20) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;35;1mComment Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+
+ActionView::MissingTemplate (Missing template comments/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:20:55) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;36;1mComment Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 21:24:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 19ms (View: 7, DB: 4) | 200 OK [http://127.0.0.1/articles/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 21:24:32) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mArticle Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 5) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 21ms (View: 5, DB: 5) | 200 OK [http://127.0.0.1/articles/5]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:24:34) [GET]
+  Parameters: {"article_id"=>"5"}
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New Comment</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (102.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-08-27 21:26:09) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mArticle Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 5) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 26ms (View: 10, DB: 5) | 200 OK [http://127.0.0.1/articles/5/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:27:37) [GET]
+  Parameters: {"article_id"=>"5"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New Comment</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:28:08) [GET]
+  Parameters: {"article_id"=>"5"}
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New Comment</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:28:09) [GET]
+  Parameters: {"article_id"=>"5"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New Comment</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:28:10) [GET]
+  Parameters: {"article_id"=>"5"}
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New Comment</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (100.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:31:14) [GET]
+  Parameters: {"article_id"=>"5"}
+  [4;36;1mComment Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xfa14a68>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:31:31) [GET]
+  Parameters: {"article_id"=>"5"}
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf86d2d0>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 21:34:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 3, DB: 4) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:34:07) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf9451f8>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:35:35) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;35;1mComment Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xfa585b0>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:36:27) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf8b68a8>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:36:28) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf9c8280>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:36:30) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;36;1mComment Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf82a7c0>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:38:27) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+Completed in 15ms (View: 5, DB: 2) | 200 OK [http://127.0.0.1/articles/3/comments/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:38:46) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;36;1mComment Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf8f6fa0>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:38:48) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xfa10730>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:39:34) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@article_comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:39:53) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf99c570>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@article_comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:39:57) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf7fcf98>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@article_comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (50.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-27 21:40:03) [GET]
+  Parameters: {"article_id"=>"3"}
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf918708>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@article_comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (96.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-27 21:54:08) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 28ms (View: 19, DB: 3) | 200 OK [http://127.0.0.1/articles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 21:54:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf9adda8>) on line #10 of app/views/articles/show.html.erb:
+7:   <b>Description:</b>
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for @new_comment do |f| %>
+11:    <%= f.text_area :comment %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 21:55:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf7e1458>) on line #10 of app/views/articles/show.html.erb:
+7:   <b>Description:</b>
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for @new_comment do |f| %>
+11:    <%= f.text_area :test %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 21:56:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 30ms (View: 9, DB: 5) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 21:57:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf89b110>) on line #10 of app/views/articles/show.html.erb:
+7:   <b>Description:</b>
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for @new_comment do |f| %>
+11:    <%= f.text_area :comment %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:06:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf993a08>) on line #10 of app/views/articles/show.html.erb:
+7:   <b>Description:</b>
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for @new_comment do |f| %>
+11:    <%= f.text_area :comment %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:07:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xfab3b10>) on line #10 of app/views/articles/show.html.erb:
+7:   <b>Description:</b>
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for @new_comment do |f| %>
+11:    <%= f.text_area :comment %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:07:50) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xf8d18d8>) on line #10 of app/views/articles/show.html.erb:
+7:   <b>Description:</b>
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for @new_comment do |f| %>
+11:    <%= f.text_area :comment %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:21:50) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (article_comment_url failed to generate from {:controller=>"comments", :action=>"show", :article_id=>#<Article id: 3, title: "Welcome to Rails", description: "Rails is a web-application framework that includes ...", created_at: "2011-08-26 20:22:54", updated_at: "2011-08-26 20:22:54">, :id=>#<Comment id: nil, comment: nil, article_id: 3, created_at: nil, updated_at: nil>}, expected: {:controller=>"comments", :action=>"show"}, diff: {:article_id=>#<Article id: 3, title: "Welcome to Rails", description: "Rails is a web-application framework that includes ...", created_at: "2011-08-26 20:22:54", updated_at: "2011-08-26 20:22:54">, :id=>#<Comment id: nil, comment: nil, article_id: 3, created_at: nil, updated_at: nil>}) on line #10 of app/views/articles/show.html.erb:
+7:   <b>Description:</b>
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for article_comment_path(@article, @new_comment) do |f| %>
+11:    <%= f.text_area :comment %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+
+    (eval):16:in `article_comment_path'
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:23:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (article_comment_url failed to generate from {:controller=>"comments", :action=>"show", :article_id=>3, :id=>#<Comment id: nil, comment: nil, article_id: 3, created_at: nil, updated_at: nil>}, expected: {:controller=>"comments", :action=>"show"}, diff: {:article_id=>3, :id=>#<Comment id: nil, comment: nil, article_id: 3, created_at: nil, updated_at: nil>}) on line #10 of app/views/articles/show.html.erb:
+7:   <b>Description:</b>
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for article_comment_path(@article.id, @new_comment) do |f| %>
+11:    <%= f.text_area :comment %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+
+    (eval):16:in `article_comment_path'
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:27:01) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 29ms (View: 10, DB: 5) | 200 OK [http://127.0.0.1/articles/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-27 22:27:21) [POST]
+  Parameters: {"comment"=>{"comment"=>"wdjrshjd"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"4"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES(NULL, '2011-08-27 16:27:21', '2011-08-27 16:27:21', NULL)[0m
+  [4;35;1mSQL (48.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/4
+Completed in 76ms (DB: 51) | 302 Found [http://127.0.0.1/articles/4/comments]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:27:21) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+  [4;36;1mComment Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 26ms (View: 6, DB: 6) | 200 OK [http://127.0.0.1/articles/4]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-27 22:27:27) [POST]
+  Parameters: {"comment"=>{"comment"=>""}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"4"}
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (1.0ms)[0m   [0mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES(NULL, '2011-08-27 16:27:27', '2011-08-27 16:27:27', NULL)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/4
+Completed in 44ms (DB: 34) | 302 Found [http://127.0.0.1/articles/4/comments]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:27:27) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 62ms (View: 5, DB: 4) | 200 OK [http://127.0.0.1/articles/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-27 22:27:32) [POST]
+  Parameters: {"comment"=>{"comment"=>"vdxvdf"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"4"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (2.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES(NULL, '2011-08-27 16:27:32', '2011-08-27 16:27:32', NULL)[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/4
+Completed in 58ms (DB: 46) | 302 Found [http://127.0.0.1/articles/4/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:27:32) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+  [4;36;1mComment Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 25ms (View: 5, DB: 7) | 200 OK [http://127.0.0.1/articles/4]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:29:45) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `comment' for #<Article:0xf9aee28>) on line #11 of app/views/articles/show.html.erb:
+8:   <%=h @article.description %>
+9: </p>
+10: <% form_for (@article, @new_comment) do |f| %>
+11:    <%= f.text_area :comment %>
+12:    <%= f.submit "Post Comment" %>
+13: <% end %>
+14: 
+
+    app/views/articles/show.html.erb:11
+    app/views/articles/show.html.erb:10
+    app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:42:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 110ms (View: 9, DB: 7) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-27 22:42:57) [POST]
+  Parameters: {"comment"=>{"comment"=>"nice job!!"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"3"}
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES(NULL, '2011-08-27 16:42:57', '2011-08-27 16:42:57', NULL)[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/3
+Completed in 50ms (DB: 38) | 302 Found [http://127.0.0.1/articles/3/comments]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:42:57) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 39ms (View: 7, DB: 7) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:45:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 27ms (View: 7, DB: 7) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-27 22:45:49) [POST]
+  Parameters: {"comment"=>{"comment"=>"jjhjh"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"3"}
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES(NULL, '2011-08-27 16:45:49', '2011-08-27 16:45:49', NULL)[0m
+  [4;36;1mSQL (48.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/3
+Completed in 63ms (DB: 51) | 302 Found [http://127.0.0.1/articles/3/comments]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:45:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 42ms (View: 11, DB: 9) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:53:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 20ms (View: 4, DB: 4) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-27 22:53:44) [POST]
+  Parameters: {"comment"=>{"comment"=>"nice job"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"3"}
+  [4;35;1mArticle Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES(NULL, '2011-08-27 16:53:44', '2011-08-27 16:53:44', 3)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/3
+Completed in 71ms (DB: 55) | 302 Found [http://127.0.0.1/articles/3/comments]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:53:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 36ms (View: 8, DB: 8) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-27 22:54:35) [POST]
+  Parameters: {"comment"=>{"comment"=>"ds"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES(NULL, '2011-08-27 16:54:35', '2011-08-27 16:54:35', 3)[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/3
+Completed in 108ms (DB: 47) | 302 Found [http://127.0.0.1/articles/3/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:54:35) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 25ms (View: 5, DB: 5) | 200 OK [http://127.0.0.1/articles/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-27 22:56:43) [POST]
+  Parameters: {"comment"=>{"comment"=>"sdada"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"3"}
+  [4;35;1mArticle Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (1.0ms)[0m   [0mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES('sdada', '2011-08-27 16:56:43', '2011-08-27 16:56:43', 3)[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/3
+Completed in 72ms (DB: 42) | 302 Found [http://127.0.0.1/articles/3/comments]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-27 22:56:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;35;1mComment Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 38ms (View: 10, DB: 7) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-28 00:38:39) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mArticle Columns (27.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 50ms (View: 16, DB: 27) | 200 OK [http://127.0.0.1/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:38:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Comment without an ID):
+  app/controllers/articles_controller.rb:18:in `show'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:39:35) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 63ms (View: 5, DB: 5) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:43:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 29ms (View: 8, DB: 5) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-28 00:44:02) [POST]
+  Parameters: {"comment"=>{"comment"=>"hello this is another comment"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (1.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES('hello this is another comment', '2011-08-27 18:44:02', '2011-08-27 18:44:02', 3)[0m
+  [4;35;1mSQL (115.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/3
+Completed in 140ms (DB: 121) | 302 Found [http://127.0.0.1/articles/3/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:44:02) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 23ms (View: 4, DB: 4) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-28 00:44:21) [POST]
+  Parameters: {"comment"=>{"comment"=>"yes comments are nice\r\n"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (1.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES('yes comments are nice\r\n', '2011-08-27 18:44:21', '2011-08-27 18:44:21', 3)[0m
+  [4;35;1mSQL (66.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/3
+Completed in 88ms (DB: 71) | 302 Found [http://127.0.0.1/articles/3/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:44:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 23ms (View: 5, DB: 5) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:44:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 26ms (View: 5, DB: 6) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:46:02) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 25ms (View: 7, DB: 7) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:46:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 64ms (View: 4, DB: 5) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:46:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 26ms (View: 8, DB: 3) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-28 00:46:58) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 25ms (View: 16, DB: 3) | 200 OK [http://127.0.0.1/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 00:47:07) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 4) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 20ms (View: 4, DB: 5) | 200 OK [http://127.0.0.1/articles/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 01:18:06) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 24ms (View: 4, DB: 4) | 200 OK [http://127.0.0.1/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index to xml (for 127.0.0.1 at 2011-08-28 01:54:13) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+  [4;35;1mArticle Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 491ms (View: 480, DB: 5) | 200 OK [http://127.0.0.1/articles.xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-08-28 01:54:36) [GET]
+
+ActionController::RoutingError (No route matches "/articles.xml/5" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 01:54:43) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 5) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 5) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 20ms (View: 4, DB: 5) | 200 OK [http://127.0.0.1/articles/5]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#new (for 127.0.0.1 at 2011-08-28 01:54:51) [GET]
+  Parameters: {"article_id"=>"5"}
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering comments/new
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0xfad1e70>) on line #3 of app/views/comments/new.html.erb:
+1: <h1>New article</h1>
+2: 
+3: <% form_for(@article_comment) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/comments/new.html.erb:3
+    app/controllers/comments_controller.rb:8:in `new'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show to xml (for 127.0.0.1 at 2011-08-28 01:55:10) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 5) [0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 5) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Completed in 18ms (View: 3, DB: 5) | 200 OK [http://127.0.0.1/articles/5.xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2011-08-28 01:56:01) [GET]
+  Parameters: {"article_id"=>"5"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-08-28 03:09:37) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 6, DB: 5) | 200 OK [http://127.0.0.1/articles/3/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-08-28 03:09:39) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 26ms (View: 16, DB: 4) | 200 OK [http://127.0.0.1/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-08-28 03:09:46) [GET]
+  [4;35;1mArticle Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-28 03:45:47) [POST]
+  Parameters: {"article"=>{"title"=>"Why Write Tests for your Rails Applications?", "description"=>"In your controller you can access the session through the `session` instance method.\r\n\r\nNOTE: There are two `session` methods, the class and the instance method. The class method which is described above is used to turn the session on and off while the instance metho d described below is used to access session values. The class method is used outside of method definitions while the instance methods is used inside methods, in actions or filters .\r\n\r\nSession values are stored using key/value pairs like a hash:"}, "commit"=>"Create", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk="}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Create (20.0ms)[0m   [0;1mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-27 21:45:47', 'Why Write Tests for your Rails Applications?', '2011-08-27 21:45:47', 'In your controller you can access the session through the `session` instance method.\r\n\r\nNOTE: There are two `session` methods, the class and the instance method. The class method which is described above is used to turn the session on and off while the instance metho d described below is used to access session values. The class method is used outside of method definitions while the instance methods is used inside methods, in actions or filters .\r\n\r\nSession values are stored using key/value pairs like a hash:')[0m
+  [4;35;1mSQL (41.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/8
+Completed in 73ms (DB: 64) | 302 Found [http://127.0.0.1/articles]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 03:45:48) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 8) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 8) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 22ms (View: 5, DB: 6) | 200 OK [http://127.0.0.1/articles/8]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-08-28 03:46:15) [POST]
+  Parameters: {"article"=>{"title"=>"Why Write Tests for your Rails Applications?", "description"=>"In your controller you can access the session through the `session` instance method.\r\n\r\nNOTE: There are two `session` methods, the class and the instance method. The class method which is described above is used to turn the session on and off while the instance metho d described below is used to access session values. The class method is used outside of method definitions while the instance methods is used inside methods, in actions or filters .\r\n\r\nSession values are stored using key/value pairs like a hash:"}, "commit"=>"Create", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk="}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Create (9.0ms)[0m   [0;1mINSERT INTO `articles` (`created_at`, `title`, `updated_at`, `description`) VALUES('2011-08-27 21:46:15', 'Why Write Tests for your Rails Applications?', '2011-08-27 21:46:15', 'In your controller you can access the session through the `session` instance method.\r\n\r\nNOTE: There are two `session` methods, the class and the instance method. The class method which is described above is used to turn the session on and off while the instance metho d described below is used to access session values. The class method is used outside of method definitions while the instance methods is used inside methods, in actions or filters .\r\n\r\nSession values are stored using key/value pairs like a hash:')[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/9
+Completed in 54ms (DB: 46) | 302 Found [http://127.0.0.1/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 03:46:15) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 9) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 23ms (View: 4, DB: 6) | 200 OK [http://127.0.0.1/articles/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-28 03:46:50) [POST]
+  Parameters: {"comment"=>{"comment"=>"test comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"9"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (29.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES('test comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment\r\ntest comment', '2011-08-27 21:46:50', '2011-08-27 21:46:50', 9)[0m
+  [4;35;1mSQL (24.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/9
+Completed in 74ms (DB: 57) | 302 Found [http://127.0.0.1/articles/9/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 03:46:50) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 9) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 40ms (View: 6, DB: 5) | 200 OK [http://127.0.0.1/articles/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-28 03:47:08) [POST]
+  Parameters: {"comment"=>{"comment"=>"test comment test comment test comment test comment test comment test comment test comment test comment test comment"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"9"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (39.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES('test comment test comment test comment test comment test comment test comment test comment test comment test comment', '2011-08-27 21:47:08', '2011-08-27 21:47:08', 9)[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/9
+Completed in 104ms (DB: 85) | 302 Found [http://127.0.0.1/articles/9/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 03:47:08) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 9) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 23ms (View: 5, DB: 5) | 200 OK [http://127.0.0.1/articles/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-28 03:47:40) [POST]
+  Parameters: {"comment"=>{"comment"=>"hello"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"9"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (10.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES('hello', '2011-08-27 21:47:40', '2011-08-27 21:47:40', 9)[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/9
+Completed in 62ms (DB: 46) | 302 Found [http://127.0.0.1/articles/9/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 03:47:40) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mArticle Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 9) [0m
+  [4;35;1mComment Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 25ms (View: 5, DB: 4) | 200 OK [http://127.0.0.1/articles/9]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-08-28 03:47:46) [POST]
+  Parameters: {"comment"=>{"comment"=>"hi"}, "commit"=>"Post Comment", "authenticity_token"=>"LJLtsM96Cgu8v57otjjNejsx3GS/msJpf4LEue63cOk=", "article_id"=>"9"}
+  [4;36;1mArticle Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (21.0ms)[0m   [0;1mINSERT INTO `comments` (`comment`, `created_at`, `updated_at`, `article_id`) VALUES('hi', '2011-08-27 21:47:46', '2011-08-27 21:47:46', 9)[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/articles/9
+Completed in 81ms (DB: 64) | 302 Found [http://127.0.0.1/articles/9/comments]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-08-28 03:47:47) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mArticle Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 9) [0m
+  [4;35;1mComment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 29ms (View: 5, DB: 5) | 200 OK [http://127.0.0.1/articles/9]

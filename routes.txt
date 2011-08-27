@@ -1,0 +1,19 @@
+ 
+(in C:/Users/mizan/BitNami RubyStack projects/newspaper)
+
+    article_comments GET    /articles/:article_id/comments(.:format)          {:controller=>"comments", :action=>"index"}
+                     POST   /articles/:article_id/comments(.:format)          {:controller=>"comments", :action=>"create"}
+ new_article_comment GET    /articles/:article_id/comments/new(.:format)      {:controller=>"comments", :action=>"new"}
+edit_article_comment GET    /articles/:article_id/comments/:id/edit(.:format) {:controller=>"comments", :action=>"edit"}
+     article_comment GET    /articles/:article_id/comments/:id(.:format)      {:controller=>"comments", :action=>"show"}
+                     PUT    /articles/:article_id/comments/:id(.:format)      {:controller=>"comments", :action=>"update"}
+                     DELETE /articles/:article_id/comments/:id(.:format)      {:controller=>"comments", :action=>"destroy"}
+            articles GET    /articles(.:format)                               {:controller=>"articles", :action=>"index"}
+                     POST   /articles(.:format)                               {:controller=>"articles", :action=>"create"}
+         new_article GET    /articles/new(.:format)                           {:controller=>"articles", :action=>"new"}
+        edit_article GET    /articles/:id/edit(.:format)                      {:controller=>"articles", :action=>"edit"}
+             article GET    /articles/:id(.:format)                           {:controller=>"articles", :action=>"show"}
+                     PUT    /articles/:id(.:format)                           {:controller=>"articles", :action=>"update"}
+                     DELETE /articles/:id(.:format)                           {:controller=>"articles", :action=>"destroy"}
+                            /:controller/:action/:id                          
+                            /:controller/:action/:id(.:format)                
